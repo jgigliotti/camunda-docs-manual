@@ -83,3 +83,15 @@ If a database other than the default H2 database is used, the following steps mu
 3. Reconfigure the database as described in the [installation]({{< ref "/installation/standalone-webapplication.md#database-configuration" >}})
    section
 4. Deploy the new and configured standalone web application to the server
+
+# Property Deprecation in the Rest API
+
+As of version `7.15.0`, the `newDuration` property in the [`POST /external-task/{id}/extendLock`][ext-task-extend-lock] 
+Rest API endpoint has been deprecated in favor of the `lockDuration` property. This was
+done to make this endpoint consistent with the new [`POST /external-task/{id}/lock`][ext-task-lock] endpoint.
+
+The old property will continue to work, but existing users are advised to adjust their Rest API 
+clients with the new `lockDuration`, as the old one may be removed in future versions.
+
+[ext-task-extend-lock]: {{< ref "/reference/rest/external-task/post-extend-lock.md" >}}
+[ext-task-lock]: {{< ref "/reference/rest/external-task/post-lock.md" >}}

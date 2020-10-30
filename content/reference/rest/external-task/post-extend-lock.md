@@ -44,8 +44,18 @@ A JSON object with the following properties:
     <th>Description</th>
   </tr>
   <tr>
+    <td>lockDuration</td>
+    <td>An amount of time (in milliseconds). This is the new lock duration 
+        starting from the current moment.
+    </td>  
+  </tr>
+  <tr>
     <td>newDuration</td>
-    <td>An amount of time (in milliseconds). This is the new lock duration starting from the current moment.</td>
+    <td><b>Deprecated:</b> Please use the <code>lockDuration</code> property 
+        instead as this property may be removed in future versions. An amount 
+        of time (in milliseconds). This is the new lock duration starting from 
+        the current moment.
+    </td>
   </tr>
   <tr>
     <td>workerId</td>
